@@ -69,3 +69,10 @@ API: Railsのコントローラを使ってCRUD操作を実装
 ・お気に入り機能
 モデル: Favoriteモデルを作成し、ユーザーと投稿の関連付けを行う。
 API: FavoritesControllerを作成して、createとdestroyアクションを実装する。
+
+・フロントエンド：HTML, CSS, JavaScriptなど
+・バックエンド：Ruby(3.2.3, Ruby on Rails(7.1.3))
+・データベース：PostgreSQL
+・デプロイサーバー：AWS
+・環境構築：Docker
+・その他：GitHub
