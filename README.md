@@ -79,3 +79,6 @@ API: FavoritesControllerを作成して、createとdestroyアクションを実�
 
 ### 画面遷移図
 Figma：https://www.figma.com/design/iwa8cwtzCuzuHkFgYjLpWo/%E5%8D%92%E6%A5%AD%E5%88%B6%E4%BD%9C?t=IcWMUi8fs8HH6nxD-1
+
+### ER図
+https://www.figma.com/design/iwa8cwtzCuzuHkFgYjLpWo/%E5%8D%92%E6%A5%AD%E5%88%B6%E4%BD%9C?node-id=0-1&p=f&t=q2iI6NnqWeuvtrkk-0
