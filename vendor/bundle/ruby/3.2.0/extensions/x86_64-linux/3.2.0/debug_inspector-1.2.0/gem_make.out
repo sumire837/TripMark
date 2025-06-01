@@ -1,0 +1,18 @@
+current directory: /finaltest/vendor/bundle/ruby/3.2.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+/usr/local/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /finaltest/vendor/bundle/ruby/3.2.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20250601-38-yiz074 sitelibdir\=./.gem.20250601-38-yiz074 clean
+
+current directory: /finaltest/vendor/bundle/ruby/3.2.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20250601-38-yiz074 sitelibdir\=./.gem.20250601-38-yiz074
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /finaltest/vendor/bundle/ruby/3.2.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20250601-38-yiz074 sitelibdir\=./.gem.20250601-38-yiz074 install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20250601-38-yiz074
+
+current directory: /finaltest/vendor/bundle/ruby/3.2.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20250601-38-yiz074 sitelibdir\=./.gem.20250601-38-yiz074 clean

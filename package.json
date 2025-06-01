@@ -1,0 +1,17 @@
+{
+  "name": "finaltest",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/sumire837/finaltest.git",
+  "author": "sumire837 <mjxyh837@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "sass ./app/assets/stylesheets/application.sass ./app/assets/builds/application.css"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.19",
+    "sass": "^1.69.5"
+  }
+}
