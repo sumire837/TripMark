@@ -8,9 +8,12 @@
   "license": "MIT",
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "sass ./app/assets/stylesheets/application.sass ./app/assets/builds/application.css"
+    "build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css"
   },
   "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.16",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6",
     "esbuild": "^0.17.19",
     "sass": "^1.69.5"
   }
