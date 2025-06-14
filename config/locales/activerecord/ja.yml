@@ -1,0 +1,42 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      post: 投稿
+    attributes:
+      user:
+        email: メールアドレス
+        name: ユーザー名
+        profile_image: アイコン
+        password: パスワード
+        password_confirmation: パスワード確認
+        age: 年代
+        gender: 性別
+        comment: 一言
+      post:
+        title: タイトル
+        category: カテゴリ
+        area: エリア
+        location: 住所
+        access: アクセス
+        url: URL
+        content: おすすめ情報
+        image: 画像
+  attributes:
+    id: ID
+    created_at: 作成日時
+    updated_at: 更新日時
+  enums:
+    user:
+      gender:
+        unspecifie: 不明
+        male: 男性
+        female: 女性
+      age:
+        ten: 10代
+        twenty: 20代
+        thirty: 30代
+        forty: 40代
+        fifity: 50代
+        sixty: 60代
+        seventy: 70代以上
