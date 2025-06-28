@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
-  mount_uploader :profile_image, AvatarUploader
+  mount_uploader :profile_image, ProfileImageUploader
   enum gender: { unspecified: 0, male: 1, female: 2 }
   enum age: {ten: 0, twenty: 1, thirty:2, forty: 3, fifty: 4, sixty: 5, seventy: 6}
 
