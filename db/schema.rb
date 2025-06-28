@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_06_14_123241) do
+ActiveRecord::Schema[7.1].define(version: 2025_06_28_062647) do
+  create_table "posts", charset: "latin1", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "location", null: false
+    t.string "access"
+    t.string "url"
+    t.text "content", null: false
+    t.string "post_image"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "users", charset: "latin1", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -20,4 +33,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_14_123241) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end
