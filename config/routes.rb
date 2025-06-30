@@ -12,5 +12,16 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
+  resources :posts, only: %i[index new create show edit destroy update]
   resource :profile, only: %i[show edit update]
+
+  namespace :admin do
+    root "dashboards#index"
+    resource :dashboard, only: %i[index]
+    get 'login' => 'user_sessions#new', :as => :login
+    post 'login' => "user_sessions#create"
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+    resources :users, only: %i[index show edit update destroy]
+    resources :posts, only: %i[index show edit update destroy]
+  end
 end

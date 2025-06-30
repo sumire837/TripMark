@@ -1,0 +1,37 @@
+<%= form_with model: board do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :category %>
+    <%= f.text_area :category, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :area %>
+    <%= f.text_area :area, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :location %>
+    <%= f.text_area :location, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :access %>
+    <%= f.text_area :access, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :url %>
+    <%= f.text_area :url, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control", rows: "10" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :post_image %>
+    <%= f.file_field :post_image, class: "form-control", accept: 'image/*' %>
+    <%= f.hidden_field :post_image_cache %>
+  </div>
+  <%= f.submit nil, class: "btn btn-primary" %>
+<% end %>
