@@ -13,11 +13,11 @@
         </div>
         <div class="mb-3">
           <%= f.label :age, class: "form-label" %>
-          <%= f.select :age, User.roles_i18n.invert, {}, class: 'form-control' %>
+          <%= f.select :age, User.ages_i18n.invert, {}, class: 'form-control' %>
         </div>
-         <div class="mb-3">
+        <div class="mb-3">
           <%= f.label :gender, class: "form-label" %>
-          <%= f.select :gender, User.roles_i18n.invert, {}, class: 'form-control' %>
+          <%= f.select :gender, User.genders_i18n.invert, {}, class: 'form-control' %>
         </div>
         <div class="mb-3">
           <%= f.label :email, class: "form-label" %>

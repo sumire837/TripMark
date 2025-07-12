@@ -6,11 +6,11 @@
   </div>
   <div class="mb-3">
     <%= f.label :category %>
-    <%= f.text_area :category, class: "form-control", rows: "10" %>
+    <%= f.select :category, Post.categorys_i18n.invert, {}, class: 'form-control' %>
   </div>
   <div class="mb-3">
     <%= f.label :area %>
-    <%= f.text_area :area, class: "form-control", rows: "10" %>
+    <%= f.select :area, Post.areas_i18n.invert, {}, class: 'form-control' %>
   </div>
   <div class="mb-3">
     <%= f.label :location %>

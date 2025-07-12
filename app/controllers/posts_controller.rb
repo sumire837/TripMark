@@ -45,6 +45,6 @@ def index
   private
 
   def post_params
-    params.require(:post).permit(:title, :location, :access, :url, :context, :post_image, :post_image_cache)
+    params.require(:post).permit(:title, :location, :category, :area, :access, :url, :context, :post_image, :post_image_cache)
   end
 end
