@@ -29,7 +29,7 @@ ja:
   enums:
     user:
       gender:
-        unspecifie: 不明
+        unspecified: 不明
         male: 男性
         female: 女性
       age:
@@ -37,6 +37,38 @@ ja:
         twenty: 20代
         thirty: 30代
         forty: 40代
-        fifity: 50代
+        fifty: 50代
         sixty: 60代
         seventy: 70代以上
+    post:
+      area:
+        Hokkaido: 北海道
+        Tohoku: 東北
+        Kanto: 関東
+        Syutoken: 首都圏
+        Hokuriku: 北陸
+        Tyubu: 中部
+        Kinki: 近畿
+        Sikoku: 四国
+        Tyugokutihou: 中国地方
+        Kyusyu: 九州
+        Asea: アジア
+        Europe: ヨーロッパ
+        Africa: アフリカ
+        NorthAmerica: 北アメリカ
+        SouthAmerica: 南アメリカ
+        other: その他・不明
+      category:
+        Shopping: 買い物
+        Fashion: ファッション
+        Food: 食べ物
+        Drink: 飲み物・お酒
+        Sightseeing: 観光
+        Amusement: 遊び・アミューズメント
+        Art: アート
+        Hotspring: 温泉
+        Hotel: 宿泊施設
+        BeautifulView: 景観
+        other: その他・不明
+
+

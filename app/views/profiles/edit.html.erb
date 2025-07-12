@@ -26,11 +26,11 @@
         </div>
         <div class="mb-3">
             <%= f.label :age, class: "form-label" %>
-            <%= f.text_field :age, class: "form-control" %>
+            <%= f.select :age, User.ages_i18n.invert, {}, class: 'form-control' %>
         </div>
         <div class="mb-3">
           <%= f.label :gender, class: "form-label" %>
-          <%= f.text_field :gender, class: "form-control" %>
+          <%= f.select :gender, User.genders_i18n.invert, {}, class: 'form-control' %>
         </div>
         <div class="mb-3">
           <%= f.label :comment, class: "form-label" %>
