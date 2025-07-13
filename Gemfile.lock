@@ -101,7 +101,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
-    bigdecimal (3.2.1)
+    bigdecimal (3.2.2)
     bindex (0.8.1)
     binding_of_caller (1.0.1)
       debug_inspector (>= 1.2.0)
@@ -385,7 +385,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
-    ransack (3.2.1)
+    ransack (4.3.0)
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
@@ -571,7 +571,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rails-i18n (~> 7.0.0)
-  ransack (= 3.2.1)
+  ransack
   reek
   rspec-rails
   rspec_junit_formatter

@@ -57,7 +57,7 @@ ja:
         Africa: アフリカ
         NorthAmerica: 北アメリカ
         SouthAmerica: 南アメリカ
-        other: その他・不明
+        area_other: その他・不明
       category:
         Shopping: 買い物
         Fashion: ファッション
@@ -69,6 +69,6 @@ ja:
         Hotspring: 温泉
         Hotel: 宿泊施設
         BeautifulView: 景観
-        other: その他・不明
+        category_other: その他・不明
 
 

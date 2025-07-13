@@ -18,11 +18,11 @@
         </tr>
         <tr>
           <th scope="row"><%= User.human_attribute_name(:age) %></th>
-          <td><%= current_user.age %></td>
+          <td><%= I18n.t("enums.user.age.#{current_user.age}") %></td>
         </tr>
         <tr>
           <th scope="row"><%= User.human_attribute_name(:gender) %></th>
-          <td><%= current_user.gender %></td>
+          <td><%= I18n.t("enums.user.gender.#{current_user.gender}") %></td>
         </tr>
         <tr>
           <th scope="row"><%= User.human_attribute_name(:comment) %></th>

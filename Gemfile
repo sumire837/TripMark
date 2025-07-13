@@ -57,7 +57,7 @@ gem 'sorcery', github: 'Sorcery/sorcery'
 gem 'rails-i18n', '~> 7.0.0'
 gem 'draper', '4.0.2'
 gem 'carrierwave', '2.2.2'
-gem 'ransack', '3.2.1'
+gem 'ransack'
 gem 'config', '4.0.0'
 gem 'enum_help', '0.0.19'
 

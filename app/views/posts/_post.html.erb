@@ -7,24 +7,12 @@
           <h4 class="card-title">
             <%= link_to post.title, post_path(post) %>
           </h4>
-        <% if current_user.own?(post) %>
-          <div class='ms-auto'>
-            <%= link_to edit_post_path(post), id: "button-edit-#{post.id}" do %>
-              <i class="bi bi-pencil-fill"></i>
-            <% end %>
-            <%= link_to post_path(post), id: "button-delete-#{post.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
-              <i class="bi bi-trash-fill"></i>
-            <% end %>
-          </div>
-        <% else %>
-            <%= render 'like_buttons', { post: post } %>
-        <% end %>
         </div>
         <ul class="list-inline">
-          <li><i class="bi bi-person"></i><%= post.user.name %></li>
-          <li><i class="bi bi-calendar"></i><%= l post.created_at, format: :short %></li>
+          <li><i class="bi bi-person"></i><%= post.user.name %>(<%= I18n.t("enums.user.gender.#{post.user.gender}") %><%= I18n.t("enums.user.age.#{post.user.age}") %>)</li>
+          <li><%= "カテゴリ: #{I18n.t("enums.post.category.#{post.category}")}" %></li>
+          <li><%= "エリア: #{I18n.t("enums.post.area.#{post.area}")}" %></li>
         </ul>
-        <p class="card-text"><%= link_to post.body, '#' %></p>
       </div>
     </div>
   </div>

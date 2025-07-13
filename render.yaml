@@ -1,0 +1,22 @@
+databases:
+  - name: tripmark_postgres
+    databaseName: tripmark_postgres
+    user: mjxyh837
+    region: singapore
+
+
+services:
+  - type: web
+    name: Trip Mark
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tripmark_postgres
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false  # 手動でRenderのWeb画面に入力

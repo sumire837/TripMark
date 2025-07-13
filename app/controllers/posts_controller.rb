@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-def index
-    @q = Post.ransack(params[:q])
-    @posts = @q.result(distinct: true).includes(:user).page(params[:page])
+  def index
+    @search_form = PostSearchForm.new(search_params)
+    @posts = @search_form.search.page(params[:page]).per(25)
   end
 
   def new
@@ -45,6 +45,11 @@ def index
   private
 
   def post_params
-    params.require(:post).permit(:title, :location, :category, :area, :access, :url, :context, :post_image, :post_image_cache)
+    params.require(:post).permit(:title, :location, :category, :area, :access, :url, :content, :post_image, :post_image_cache)
   end
+
+  def search_params
+    params.fetch(:post_search_form, {}).permit(:gender, :age, :category, :area, :title)
+  end
+
 end
