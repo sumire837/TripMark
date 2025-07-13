@@ -10,37 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_07_12_145732) do
-  create_table "posts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+ActiveRecord::Schema[7.1].define(version: 2025_06_30_123507) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
     t.string "title", null: false
-    t.text "location", size: :medium, null: false
+    t.text "location"
+    t.integer "area", null: false
+    t.integer "category", null: false
     t.string "access"
     t.string "url"
-    t.text "content", size: :medium, null: false
+    t.text "content", null: false
     t.string "post_image"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category", null: false
-    t.integer "area", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
+    t.string "name"
+    t.integer "gender"
+    t.integer "age"
+    t.text "comment"
+    t.string "profile_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.integer "access_count_to_reset_password_page", default: 0
-    t.string "name"
-    t.integer "gender"
-    t.integer "age"
-    t.text "comment", size: :medium
-    t.string "profile_image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

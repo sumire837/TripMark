@@ -28,10 +28,10 @@
             <% end %>
           </div>
             </div>
-            <p><%= simple_format(@post.location) %></p>
-            <p><%= simple_format(@post.access) %></p>
-            <p><%= simple_format(@post.url) %></p>
-            <p><%= simple_format(@post.content) %></p>
+            <p><%= simple_format("住所: #{@post.location}") %></p>
+            <p><%= simple_format("アクセス: #{@post.access}") %></p>
+            <p><%= simple_format("URL: #{@post.url}") %></p>
+            <p><%= simple_format("おすすめ情報: #{@post.content}") %></p>
           </div>
         </article>
       </div>

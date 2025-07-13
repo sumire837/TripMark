@@ -2,17 +2,17 @@ version: '3'
 
 services:
   db:
-    image: mysql:5.7
+    image: postgres
     platform: linux/amd64
     environment:
       TZ: Asia/Tokyo
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: finaltest_development
-      MYSQL_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: finaltest_development
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
     ports:
-      - "3307:3306"
+      - "5432:5432"
 
   web:
     build: .
@@ -26,7 +26,7 @@ services:
     environment:
       TZ: Asia/Tokyo
       DATABASE_HOST: db
-      DATABASE_USERNAME: root
+      DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
       SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
     ports:
@@ -42,6 +42,6 @@ services:
       - "4444:4444"
 
 volumes:
-  mysql_data:
+  postgres_data:
   bundle_data:
   node_modules:
