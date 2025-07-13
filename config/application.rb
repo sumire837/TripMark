@@ -18,10 +18,11 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Finaltest
+module TripMark
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
+    config.autoload_paths << Rails.root.join('app', 'forms')
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
@@ -45,5 +46,6 @@ module Finaltest
     end
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
+    config.hosts << 'xxx.onrender.com'
   end
 end
