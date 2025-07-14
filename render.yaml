@@ -15,6 +15,8 @@ services:
     startCommand: "bundle exec puma -C config/puma.rb"
     preDeployCommand: "bundle exec rails db:migrate RAILS_ENV=production"
     envVars:
+      - key: PORT
+        value: "10000"
       - key: DATABASE_URL
         fromDatabase:
           name: tripmark_postgres
