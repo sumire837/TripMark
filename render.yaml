@@ -7,7 +7,7 @@ databases:
 
 services:
   - type: web
-    name: Trip Mark
+    name: TripMark
     env: ruby
     region: singapore
     plan: free
