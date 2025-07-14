@@ -13,11 +13,11 @@
         </div>
         <div class="mb-3">
           <%= f.label :age, class: "form-label" %>
-          <%= f.select :age, User.ages_i18n.invert, {}, class: 'form-control' %>
+          <%= f.select :age, User.ages.keys.map { |k| [I18n.t("enums.user.age.#{k}"), k] }, {}, class: 'form-control' %>
         </div>
         <div class="mb-3">
           <%= f.label :gender, class: "form-label" %>
-          <%= f.select :gender, User.genders_i18n.invert, {}, class: 'form-control' %>
+          <%= f.select :gender, User.genders.keys.map { |k| [I18n.t("enums.user.gender.#{k}"), k] }, {}, class: 'form-control' %>
         </div>
         <div class="mb-3">
           <%= f.label :email, class: "form-label" %>
