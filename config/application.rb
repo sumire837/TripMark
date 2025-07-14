@@ -46,6 +46,6 @@ module FinalTest
     end
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
-    config.hosts << 'trip-mark.onrender.com'
+    config.hosts << 'tripmark.onrender.com'
   end
 end
